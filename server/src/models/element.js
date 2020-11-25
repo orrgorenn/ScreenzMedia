@@ -12,7 +12,8 @@ const elementSchema = new mongoose.Schema({
     },
     elementType: {
         type: String,
-        enum: ['text', 'image', 'video']
+        enum: ['text', 'image', 'video'],
+        required: true
     },
     transitionTime: {
         type: Number,

@@ -5,7 +5,7 @@ const { validateCreateBuilding, isReqValid } = require('../validators/building')
 
 const router = express.Router();
 
-router.get('/', authUser, getBuildings);
+router.get('/', getBuildings);
 router.post('/', validateCreateBuilding, isReqValid, createBuilding);
 router.get('/:id', authUser, getBuilding);
 router.put('/:id', authUser, editBuilding);

@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const usersRoutes = require('./src/routes/users');
 const buildingsRoutes = require('./src/routes/buildings');
 const authRoutes = require('./src/routes/auth');
+const elementsRoutes = require('./src/routes/elements');
 
 // Env
 env.config();
@@ -25,6 +26,7 @@ const connect = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTo
 app.use('/users', usersRoutes);
 app.use('/buildings', buildingsRoutes);
 app.use('/auth', authRoutes);
+app.use('/elements', elementsRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
